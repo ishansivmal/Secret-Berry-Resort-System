@@ -22,6 +22,7 @@
 }
 .logo {
     color: var(--primary-color);
+    text-decoration: none;
 }
 .nav-link {
     position: relative;
@@ -67,4 +68,8 @@
 
 .navbar.scrolled .logo span {
     color: var(--white) !important;
+}
+
+.menuIcon{
+    display: none;
 }

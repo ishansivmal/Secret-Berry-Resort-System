@@ -27,3 +27,10 @@ footer{
     border-top: 1px solid #333;
     padding-top: 10px;
 }
+
+.fooCon a{
+    cursor: pointer;
+}
+.fooCon a:hover {
+    color: #fff !important;  /* Force the color change */
+}
