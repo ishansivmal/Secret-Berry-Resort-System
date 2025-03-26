@@ -10,7 +10,7 @@ This project is part of an assignment to build a basic Hotel Management System.
 - Frontend: HTML, CSS, JavaScript
 - Backend: PHP
 - Styling: Bootstrap Framework
-- Database: MySQL (for managing books, users, and library records)
+- Database: MySQL 
 
 #### Features
 

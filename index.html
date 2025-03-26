@@ -12,24 +12,108 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="Assets/js/header-footer-active.js"></script>
     <script src="Assets/js/header-footer.js"></script>
+ 
 
     <link rel="stylesheet" href="Assets/css/index.css">
 </head>
 <body>
     <div id="header"></div>
-    <div class="header-container">
-        <div class="section__container" id="home">
-            <div class="container-text">
-                <h1><!--YOUR PAGE NAME--></h1>
-                <div class="page-path">
-                    <p><span>Home ></span> <!--YOUR PAGE NAME--></p>
+    <section class="home_slider">
+        <img src="Assets/media/index/img1.jpg" alt="Slide 1" class="slider_img active">
+        <img src="Assets/media/index/img2.jpg" alt="Slide 2" class="slider_img">
+        <img src="Assets/media/index/img3.jpg" alt="Slide 3" class="slider_img">
+        <img src="Assets/media/index/img4.jpg" alt="Slide 4" class="slider_img">
+        <img src="Assets/media/index/img5.jpg" alt="Slide 5" class="slider_img">
+
+        <div class="banner_content active">
+            <h2>Welcome to Our Hotel</h2>
+            <p>Experience luxury like never before.</p>
+            <a href="#" class="more_btn">Explore</a>
+        </div>
+
+        <div class="banner_content">
+            <h2>Breathtaking Views</h2>
+            <p>Experience the best view.</p>
+            <a href="#" class="more_btn">Explore</a>
+        </div>
+
+        <div class="banner_content">
+            <h2>Luxury Redefined</h2>
+            <p>A place where elegance meets comfort.</p>
+            <a href="#" class="more_btn">Explore</a>
+        </div>
+
+        <div class="banner_content">
+            <h2>Comfortable & Affordable</h2>
+            <p>Your perfect getaway awaits.</p>
+            <a href="#" class="more_btn">Explore</a>
+        </div>
+
+        <div class="banner_content">
+            <h2>Delicious Dining</h2>
+            <p>Enjoy world-class cuisines.</p>
+            <a href="#" class="more_btn">Explore</a>
+        </div>
+
+        <div class="menu_bg">
+            <img src="Assets/media/index/img1.jpg" alt="Slide 1" class="bg_btn active" data-index="0">
+            <img src="Assets/media/index/img2.jpg" alt="Slide 2" class="bg_btn" data-index="1">
+            <img src="Assets/media/index/img3.jpg" alt="Slide 3" class="bg_btn" data-index="2">
+            <img src="Assets/media/index/img4.jpg" alt="Slide 4" class="bg_btn" data-index="3">
+            <img src="Assets/media/index/img5.jpg" alt="Slide 5" class="bg_btn" data-index="4">
+        </div>
+    </section>
+    <div class="sec">
+        <section class="formBook bg-light">
+            <div class="container mt-5">
+                <div class="booking-form  p-3 rounded">
+                    <form action="/submit-booking" method="post">
+                        <div class="row g-3">
+                            <div class="col-md-4">
+                                <label for="check-date" class="form-label">CHECK-IN DATE</label>
+                                <input type="date" id="check-date" name="check-date" class="form-control">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="check-out-date" class="form-label">CHECK-OUT DATE</label>
+                                <input type="date" id="check-out-date" name="check-out-date" class="form-control" required>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="room-type" class="form-label">ROOM TYPE</label>
+                                <select name="room-type" id="room-type" class="form-select" required>
+                                    <option value="single">Single</option>
+                                    <option value="double">Double</option>
+                                    <option value="suite">Suite</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="children" class="form-label">CHILDERN</label>
+                                <select name="children" id="children" class="form-select" required>
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="2">3</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="adults" class="form-label">ADULTS</label>
+                                <select name="adults" id="adults" class="form-select" required>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4 d-grid book-btn">
+                                <button type="submit" class="btn btn-primary">Book Now</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
-        </div>
-    </div>
-        <div class="sec">
+            </section>
             
-        </div>
+    </div>
+
     <div id="footer"></div>
+    <script src="Assets/js/index.js"></script>
 </body>
 </html>
