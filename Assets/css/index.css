@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+:root {
+    --primary-color: #e82574;
+    --primary-color-dark: #bc1c5c;
+    --text-dark: #0c0a09;
+    --text-light: #78716c;
+    --white: #ffffff;
+    --max-width: 1200px;
+}
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin:0; 
+    padding:0;
+    box-sizing: border-box;
+}
+.sec{
+    margin-top: 81vh;
+    position: relative;
+    margin-bottom: 20px;
+}
+body {
+    overflow-x: hidden;
+}
+
+/*BACKGROUND IMAGE SLIDER*/
+
+.home_slider img{
+    width: 100%;
+}
+
+.home_slider {
+    z-index: 0000;
+    width: 100%;
+    min-height: 100vh;
+    position: absolute;
+    
+}
+
+.home_slider .slider_img{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease-in-out;
+    object-fit: cover;
+}
+
+.home_slider .slider_img.active{
+    opacity: 1;
+    visibility: visible;
+    z-index: 1;
+}
+
+
+.home_slider::after{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(52,2,56,0.233);
+}
+.banner_content{
+    position: absolute;
+    top: 48%;
+    left: 8%;
+    width: 50%;
+    height: 100vh;
+    z-index: 9999;
+    display: none;
+    opacity: 1;
+    visibility: hidden;
+    animation: textAnim 4s linear forwards;
+}
+@keyframes textAnim{
+
+    100%{
+        opacity: 1;
+        visibility: visible;
+    }
+}
+.banner_content.active{
+    display: block;
+}
+.banner_content h2{
+    font-size: 35px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    color: #ffffff;
+}
+.banner_content p{
+    font-size: 18px;
+    color: #ffffff;
+    font-weight: 500;
+    letter-spacing: 1.8px;
+}
+.banner_content .more_btn{
+    padding: 15px 25px;
+    background: var(--primary-color-dark);
+    color: #fff;
+    font-size: 16px;
+    border-radius: 50px;
+    position: relative;
+    top: 25px;
+    transition: .3s ease-out;
+    text-decoration: none;
+}
+.banner_content .more_btn:hover{
+    background: var(--text-dark);
+    color: #fff;
+}
+
+.menu_bg{
+    z-index: 9999;
+    position: absolute;
+    bottom: 100px;
+    left: 70%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 20px;
+}
+
+@media (max-width:900px){
+        .menu_bg{
+            display: none;
+        }
+}
+
+.menu_bg .bg_btn{
+    width: 120px;
+    height: 70px;
+    border: 1.5px solid #fff;
+    cursor: pointer;
+    object-fit: cover;
+    transform: scale(0);
+    animation: imgBtn 0.2s linear forwards;
+    animation-delay: calc(0.2s * var(--i));
+}
+@keyframes imgBtn{
+    100%{
+        transform: scale(1);
+    }
+}
+.menu_bg .bg_btn:hover{
+    border: 2px solid var(--primary-color) !important;
+    transform: scale(1.2) !important;
+    transition: .3s ease !important;
+}
+
+.booking-form label{
+    color: var(--primary-color);
+}
+.booking-form{
+   background-color: white;
+}
+.formBook{
+    margin-top: 150px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}

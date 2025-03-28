@@ -1,0 +1,36 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+footer{
+    background-color: black;
+    margin-top: auto;
+}
+.foo{
+    margin-left: 8%;
+    margin-right: 8%;
+}
+
+.logoText span{
+    color: var(--primary-color);
+}
+.fooCon{
+    line-height: 1.9em;
+}
+.fooBot{
+    border-top: 1px solid #333;
+    padding-top: 10px;
+}
+
+.fooCon a{
+    cursor: pointer;
+}
+.fooCon a:hover {
+    color: #fff !important;  /* Force the color change */
+}
