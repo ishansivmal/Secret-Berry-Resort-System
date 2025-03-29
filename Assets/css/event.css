@@ -88,7 +88,7 @@ body {
     justify-content: space-between; /* Push content to top and bottom */
     align-items: center; /* Center items horizontally */
     transition: box-shadow 0.3s ease-in-out, transform 0.2s;
-    background-image: url('/Assets/media/event/event-background-image/img3.jpg'); 
+    background-image: url('/Assets/media/event/event-background-image/img5.jpg'); 
     background-size: cover;  /* Ensures the image covers the whole div */
     background-position: center; /* Keeps the image centered */
     background-repeat: no-repeat; /* Prevents image repetition */
@@ -172,7 +172,7 @@ body {
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
     padding-block: 0.5rem;
     padding-inline: 1.25rem;
-    background-color: rgb(0 107 179);
+    background-color:  #e82574;
     border-radius: 9999px;
     display: flex;
     align-items: center;
@@ -286,7 +286,7 @@ body {
 }
 
 .radio-inputs .radio input:checked + .name {
-    background: linear-gradient(145deg, #3b82f6, #2563eb);
+    background: linear-gradient(145deg, #78716c, #0c0a09);
     color: white;
     font-weight: 600;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
@@ -356,3 +356,136 @@ body {
     flex-wrap: wrap;
 }
 
+
+
+
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 50%;
+    text-align: center;
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+.modal-title {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.modal-body {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Custom Modal Form Styles */
+#customModal .form {
+    padding: 2rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+#customModal .form .input {
+    padding: 0.75rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    width: 100%;
+    font-size: 1rem;
+    margin-bottom: 1rem; /* Space between inputs */
+    background-color: white;
+    box-shadow: #cff0ff 0px 10px 10px -5px;
+}
+
+/* Focus Input */
+#customModal .form .input:focus {
+    border-color: #d62f8b; /* Light blue */
+    outline: none;
+    box-shadow: 0px 0px 5px rgba(192, 35, 108, 0.5);
+}
+
+/* Button Styles */
+#customModal .form .login-button {
+    padding: 0.75rem;
+    background: linear-gradient(45deg, rgb(236, 35, 129) 0%, rgb(250, 131, 196) 100%);
+    color: white;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.3s ease;
+    box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 20px 10px -15px;
+}
+
+#customModal .form .login-button:hover {
+    transform: scale(1.03);
+    box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 23px 10px -20px;
+}
+
+#customModal .form .login-button:active {
+    transform: scale(0.95);
+    box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 15px 10px -10px;
+}
+
+/* Reset Button */
+#customModal .form .clear-button {
+    padding: 0.75rem;
+    background-color: #f3f4f6;
+    color: #333;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+#customModal .form .clear-button:hover {
+    background-color: #e5e7eb; /* Lighter gray on hover */
+}
+
+#customModal .form .clear-button:active {
+    transform: scale(0.95);
+}
