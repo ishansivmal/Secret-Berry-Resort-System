@@ -88,7 +88,7 @@ body {
     justify-content: space-between; /* Push content to top and bottom */
     align-items: center; /* Center items horizontally */
     transition: box-shadow 0.3s ease-in-out, transform 0.2s;
-    background-image: url('/Assets/media/event/event-background-image/img5.jpg'); 
+    background-image: url('/Assets/media/event/event-background-image/img7.jpg'); 
     background-size: cover;  /* Ensures the image covers the whole div */
     background-position: center; /* Keeps the image centered */
     background-repeat: no-repeat; /* Prevents image repetition */
