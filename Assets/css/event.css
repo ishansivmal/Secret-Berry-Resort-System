@@ -1,0 +1,491 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+:root {
+    --primary-color: #e82574;
+    --primary-color-dark: #bc1c5c;
+    --text-dark: #0c0a09;
+    --text-light: #78716c;
+    --white: #ffffff;
+    --max-width: 1200px;
+}
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin:0; 
+    padding:0;
+    box-sizing: border-box;
+}
+.sec{
+    margin-top: 20px;
+    margin-left: 8%;
+    margin-right: 8%;
+    margin-bottom: 20px;
+    min-height: 100vh;
+    display: flex;
+    
+    
+    
+    
+    
+}
+body {
+    overflow-x: hidden;
+}
+
+.section__container {
+    margin: auto;
+    margin-bottom: 1rem;
+    line-height: 3rem;
+    height: 400px;
+    text-align: center;
+}
+.header-container{
+    height: 400px;
+    background-image: url("../media/index/header.jpg");
+    background-position: center ; 
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.container-text{
+    color: rgb(255, 254, 254);
+    padding-top: 150px;
+}
+.container-text h1{
+    font-weight: bold;
+    
+}
+.container-text span{
+    color: var(--text-light);
+}
+
+
+
+
+
+
+
+/* Events Section */
+#events-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 20px;
+}
+
+/* Single Event Box */
+.event-item {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    height: 450px;
+    text-align: center;
+    display: flex;
+    flex-direction: column; /* Align items vertically */
+    justify-content: space-between; /* Push content to top and bottom */
+    align-items: center; /* Center items horizontally */
+    transition: box-shadow 0.3s ease-in-out, transform 0.2s;
+    background-image: url('/Assets/media/event/event-background-image/img7.jpg'); 
+    background-size: cover;  /* Ensures the image covers the whole div */
+    background-position: center; /* Keeps the image centered */
+    background-repeat: no-repeat; /* Prevents image repetition */
+}
+
+/* Hover Effects for Event Item */
+.event-item:hover {
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.3);
+    transform: scale(1.03);
+}
+
+/* Event Name */
+.event-name {
+    font-size: 2rem; /* Larger size for better visibility */
+    font-weight: bold;
+    background: linear-gradient(45deg, #FF6F61, #FF8C00, #FFD700, #FF6347, #FF1493);
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4), 0 0 25px rgba(255, 255, 255, 0.3);
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 5px;
+    flex-grow: 1; /* Allow the event name to take up available space */
+}
+
+/* Buttons Container */
+.event-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    width: 100%; /* Make buttons take full width of the container */
+    margin-top: auto; /* This ensures the buttons are pushed to the bottom */
+}
+
+/* Explore Button */
+.boton-elegante {
+    padding: 12px 25px;
+    border: 2px solid #2c2c2c;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: all 0.4s ease;
+    outline: none;
+    position: relative;
+    overflow: hidden;
+    font-weight: bold;
+}
+
+.boton-elegante::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(
+        circle,
+        rgba(255, 255, 255, 0.25) 0%,
+        rgba(255, 255, 255, 0) 70%
+    );
+    transform: scale(0);
+    transition: transform 0.5s ease;
+}
+
+.boton-elegante:hover::after {
+    transform: scale(4);
+}
+
+.boton-elegante:hover {
+    border-color: #666666;
+    background: #292929;
+}
+
+/* Register Button */
+.button {
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    padding-block: 0.5rem;
+    padding-inline: 1.25rem;
+    background-color:  #e82574;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffff;
+    gap: 10px;
+    font-weight: bold;
+    border: 3px solid #ffffff4d;
+    outline: none;
+    overflow: hidden;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+    transition: all 0.3s ease-in-out;
+}
+
+.button:hover {
+    transform: scale(1.05);
+    border-color: #fff9;
+}
+
+.button:hover .icon {
+    transform: translate(4px);
+}
+
+.button:hover::before {
+    animation: shine 1.5s ease-out infinite;
+}
+
+.button::before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100%;
+    background-image: linear-gradient(
+        120deg,
+        rgba(255, 255, 255, 0) 30%,
+        rgba(255, 255, 255, 0.8),
+        rgba(255, 255, 255, 0) 70%
+    );
+    top: 0;
+    left: -100px;
+    opacity: 0.6;
+}
+
+@keyframes shine {
+    0% {
+        left: -100px;
+    }
+
+    60% {
+        left: 100%;
+    }
+
+    to {
+        left: 100%;
+    }
+}
+
+/* Radio Buttons Section */
+.radio-inputs {
+    
+    position: relative   ;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 1rem;
+    background: linear-gradient(145deg, #e6e6e6, #ffffff);
+    box-sizing: border-box;
+    box-shadow:
+      5px 5px 15px rgba(0, 0, 0, 0.15),
+      -5px -5px 15px rgba(255, 255, 255, 0.8);
+    padding: 0.5rem;
+   
+    min-width: 20%;
+    font-size: 14px;
+    gap: 0.5rem;
+    margin-top: 30px;    
+}
+
+.radio-inputs .radio {
+    flex: 1 1 auto;
+    text-align: center;
+    position: relative;
+}
+
+.radio-inputs .radio input {
+    display: none;
+}
+
+.radio-inputs .radio .name {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.7rem;
+    border: none;
+    padding: 0.7rem 0;
+    color: #2d3748;
+    font-weight: 500;
+    font-family: inherit;
+    background: linear-gradient(145deg, #ffffff, #e6e6e6);
+    box-shadow:
+      3px 3px 6px rgba(0, 0, 0, 0.1),
+      -3px -3px 6px rgba(255, 255, 255, 0.7);
+    transition: all 0.2s ease;
+    overflow: hidden;
+}
+
+.radio-inputs .radio input:checked + .name {
+    background: linear-gradient(145deg, #78716c, #0c0a09);
+    color: white;
+    font-weight: 600;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    box-shadow:
+      inset 2px 2px 5px rgba(0, 0, 0, 0.2),
+      inset -2px -2px 5px rgba(255, 255, 255, 0.1),
+      3px 3px 8px rgba(59, 130, 246, 0.3);
+    transform: translateY(2px);
+}
+
+/* Hover effect */
+.radio-inputs .radio:hover .name {
+    background: linear-gradient(145deg, #f0f0f0, #ffffff);
+    transform: translateY(-1px);
+    box-shadow:
+      4px 4px 8px rgba(0, 0, 0, 0.1),
+      -4px -4px 8px rgba(255, 255, 255, 0.8);
+}
+
+.radio-inputs .radio:hover input:checked + .name {
+    transform: translateY(1px);
+}
+
+/* Animation */
+.radio-inputs .radio input:checked + .name {
+    animation: select 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Particles */
+.radio-inputs .radio .name::before,
+.radio-inputs .radio .name::after {
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.radio-inputs .radio input:checked + .name::before,
+.radio-inputs .radio input:checked + .name::after {
+    animation: particles 0.8s ease-out forwards;
+}
+
+.radio-inputs .radio .name::before {
+    background: #60a5fa;
+    box-shadow: 0 0 6px #60a5fa;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.radio-inputs .radio .name::after {
+    background: #3b82f6;
+    box-shadow: 0 0 6px #3b82f6;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+
+.poster{
+
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+
+
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 50%;
+    text-align: center;
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+.modal-title {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.modal-body {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Custom Modal Form Styles */
+#customModal .form {
+    padding: 2rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+#customModal .form .input {
+    padding: 0.75rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    width: 100%;
+    font-size: 1rem;
+    margin-bottom: 1rem; /* Space between inputs */
+    background-color: white;
+    box-shadow: #cff0ff 0px 10px 10px -5px;
+}
+
+/* Focus Input */
+#customModal .form .input:focus {
+    border-color: #d62f8b; /* Light blue */
+    outline: none;
+    box-shadow: 0px 0px 5px rgba(192, 35, 108, 0.5);
+}
+
+/* Button Styles */
+#customModal .form .login-button {
+    padding: 0.75rem;
+    background: linear-gradient(45deg, rgb(236, 35, 129) 0%, rgb(250, 131, 196) 100%);
+    color: white;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.3s ease;
+    box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 20px 10px -15px;
+}
+
+#customModal .form .login-button:hover {
+    transform: scale(1.03);
+    box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 23px 10px -20px;
+}
+
+#customModal .form .login-button:active {
+    transform: scale(0.95);
+    box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 15px 10px -10px;
+}
+
+/* Reset Button */
+#customModal .form .clear-button {
+    padding: 0.75rem;
+    background-color: #f3f4f6;
+    color: #333;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+#customModal .form .clear-button:hover {
+    background-color: #e5e7eb; /* Lighter gray on hover */
+}
+
+#customModal .form .clear-button:active {
+    transform: scale(0.95);
+}
