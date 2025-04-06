@@ -1,0 +1,1136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SBR | Hotel Management System</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.lineicons.com/4.0/lineicons.css" />
+    <link rel="stylesheet" href="Assets/css/room_catalogue.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="Assets/js/header-footer-active.js"></script>
+    <script src="Assets/js/header-footer.js"></script>
+    <script src="Assets/js/room_catalogue.js"></script>
+
+    <link rel="stylesheet" href="Assets/css/YOUR STYLE NAME">
+</head>
+<div>
+    <div id="header"></div>
+    <div class="header-container">
+        <div class="section__container" id="home">
+            <div class="container-text">
+                <h1>Room Catalogue</h1>
+                <div class="page-path">
+                    <p><span>Room Catalogue ></span></p> 
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sec">
+            <div class="searchBox">
+                <input type="text" id="searchBox" class="form-control" placeholder="Search by room type or feature...">
+            </div>     
+            <div class="room-container">
+                <h2 class="mt-5 pt-4 mb-4 text-center fw-bold h-font">Available Top Level Rooms</h2>
+                <div class="room-list">
+                    <!-- Luxury Suite -->
+                    <div class="col-md-4 room-item" data-name="luxury Suite" data-features="wifi fireplace jacuzzi garden" data-category="luxury">
+                        <div class="room-card">
+                            <div id="luxurySuiteCarousel" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="Assets/media/room_catalogue/luxury/1.jpg" class="d-block w-100" alt="Room Image 1">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="Assets/media/room_catalogue/luxury/2.jpg" class="d-block w-100" alt="Room Image 2">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="Assets/media/room_catalogue/luxury/3.jpg" class="d-block w-100" alt="Room Image 3">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="Assets/media/room_catalogue/luxury/4.jpg" class="d-block w-100" alt="Room Image 4">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="Assets/media/room_catalogue/Deluxe/5.jpeg" class="d-block w-100" alt="Room Image 5">
+                                    </div>
+                                </div>
+                                <br>
+                                <button class="prev" type="button" data-bs-target="#luxurySuiteCarousel" data-bs-slide="prev">
+                                    <span class="visually">Previous < </span>
+                                </button>
+                                <button class="next" type="button" data-bs-target="#luxurySuiteCarousel" data-bs-slide="next">
+                                    <span class="visually"> > Next</span>
+                                </button>
+                            </div>
+                            <h2>Luxury Suite</h2>
+                            <p>Spacious suite with Gregory Lake view and a private balcony.</p>
+                            <div class="card-body">
+                                <p><i class="bi bi-wifi"></i> Free WiFi | <i class="bi bi-fire"></i> Fireplace | <i class="bi bi-droplet"></i> Private Jacuzzi | <i class="bi bi-tree"></i> Garden View</p>
+                            </div>
+                            <span class="price">$250 / Night</span><br>
+                            <button class="book-now" onclick="openBookingPopup('Luxury Suite')">Book Now</button>
+                        </div>
+
+                        <div id="bookingModal" class="booking-modal">
+                            <div class="modal-content">
+                                <span class="close-btn" onclick="closeBookingPopup()">&times;</span>
+                                <h2>Booking Details</h2>
+                                <form id="bookingForm">
+                                    <label for="name">Full Name</label>
+                                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                                    <label for="email">Email Address</label>
+                                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                                    <label for="checkin">Check-in Date</label>
+                                    <input type="date" id="checkin" name="checkin" required>
+                                    <label for="checkout">Check-out Date</label>
+                                    <input type="date" id="checkout" name="checkout" required>
+                                    <button type="submit">Submit Booking</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <!-- Deluxe Room -->
+                    <div class="col-md-4 room-item" data-name="Deluxe Room" data-features="wifi heating coffee" data-category="deluxe">
+                        <div class="room-card">
+                            <div id="deluxeRoomCarousel" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="Assets/media/room_catalogue/Deluxe/1.jpg" class="d-block w-100" alt="Room Image 1">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="Assets/media/room_catalogue/Deluxe/2.jpeg" class="d-block w-100" alt="Room Image 2">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="Assets/media/room_catalogue/Deluxe/3.jpeg" class="d-block w-100" alt="Room Image 3">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="Assets/media/room_catalogue/Deluxe/4.jpeg" class="d-block w-100" alt="Room Image 4">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="Assets/media/room_catalogue/Deluxe/5.jpeg" class="d-block w-100" alt="Room Image 5">
+                                    </div>
+                                </div>
+                                <br>
+                                <button class="prev" type="button" data-bs-target="#deluxeRoomCarousel" data-bs-slide="prev">
+                                    <span class="visually">Previous < </span>
+                                </button>
+                                <button class="next" type="button" data-bs-target="#deluxeRoomCarousel" data-bs-slide="next">
+                                    <span class="visually">> Next</span>
+                                </button>
+                            </div>
+                            <h2>Deluxe Room</h2>
+                            <p>Spacious suite with Gregory Lake view and a private balcony.</p>
+                            <div class="card-body">
+                                <p><i class="bi bi-wifi"></i> Free WiFi | <i class="bi bi-fire"></i> Fireplace | <i class="bi bi-droplet"></i> Private Jacuzzi | <i class="bi bi-tree"></i> Garden View</p>
+                            </div>
+                            <span class="price">$180 / Night</span><br>
+                            <button class="book-now" onclick="openBookingPopup('Deluxe Room')">Book Now</button>
+                        </div>
+
+                        <div id="bookingModal" class="booking-modal">
+                            <div class="modal-content">
+                                <span class="close-btn" onclick="closeBookingPopup()">&times;</span>
+                                <h2>Booking Details</h2>
+                                <form id="bookingForm">
+                                    <label for="name">Full Name</label>
+                                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                                    <label for="email">Email Address</label>
+                                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                                    <label for="checkin">Check-in Date</label>
+                                    <input type="date" id="checkin" name="checkin" required>
+                                    <label for="checkout">Check-out Date</label>
+                                    <input type="date" id="checkout" name="checkout" required>
+                                    <button type="submit">Submit Booking</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+       
+            
+                    <!-- Standard Room -->
+                    <div class="col-md-4 room-item" data-name="Standard Room" data-features="wifi parking breakfast" data-category="standard">
+                        <div class="room-card">
+                            <div id="standardRoomCarousel" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="Assets/media/room_catalogue/Standard/1.jpg" class="d-block w-100" alt="Room Image 1">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="Assets/media/room_catalogue/Standard/2.jpg" class="d-block w-100" alt="Room Image 2">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="Assets/media/room_catalogue/Standard/3.jpg" class="d-block w-100" alt="Room Image 3">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="Assets/media/room_catalogue/Standard/4.jpg" class="d-block w-100" alt="Room Image 4">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="Assets/media/room_catalogue/Standard/5.jpg" class="d-block w-100" alt="Room Image 5">
+                                    </div>
+                                </div>
+                                <br>
+                                <button class="prev" type="button" data-bs-target="#standardRoomCarousel" data-bs-slide="prev">
+                                    <span class="visually">Previous < </span>
+                                </button>
+                                <button class="next" type="button" data-bs-target="#standardRoomCarousel" data-bs-slide="next">
+                                    <span class="visually">>&nbsp;Next</span>
+                                </button>
+                            </div>
+                            <h2>Standard Room</h2>
+                            <p>Cozy room with modern amenities.</p>
+                            <div class="card-body">
+                                <p><i class="bi bi-wifi"></i> Free WiFi | <i class="bi bi-p-circle"></i> Free Parking | <i class="bi bi-egg-fried"></i> Breakfast</p>
+                            </div>
+                            <span class="price">$120 / Night</span><br>
+                            <button class="book-now" onclick="openBookingPopup('Standard Room')">Book Now</button>
+                        </div>
+
+                        <div id="bookingModal" class="booking-modal">
+                            <div class="modal-content">
+                                <span class="close-btn" onclick="closeBookingPopup()">&times;</span>
+                                <h2>Booking Details</h2>
+                                <form id="bookingForm">
+                                    <label for="name">Full Name</label>
+                                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                                    <label for="email">Email Address</label>
+                                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                                    <label for="checkin">Check-in Date</label>
+                                    <input type="date" id="checkin" name="checkin" required>
+                                    <label for="checkout">Check-out Date</label>
+                                    <input type="date" id="checkout" name="checkout" required>
+                                    <button type="submit">Submit Booking</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+
+            <div class="alert alert-info">
+                <strong>First-Time Guests Special! 🎁</strong> We love meeting new guests! Enjoy a special offer just for you when you visit for the first time.
+                <a href="signin.html" class="alert-link">Sign in here to unlock the special offer.</a>
+            </div>
+
+            <div class="d-flex justify-content-evenly mb-2">
+                <div class="text-container">
+                    <div class="sub-text">
+                        <p>Wake up to the crisp mountain air, misty landscapes, and the soothing aroma of fresh Ceylon tea as you escape to the breathtaking 
+                            beauty of Nuwara Eliya, the "Little England" of Sri Lanka. Nestled amidst rolling tea plantations and serene lakes, Secret Berry 
+                            Resort offers a perfect blend of luxury, comfort, and nature’s tranquility.</p>
+
+                        <p>Indulge in cozy fire-lit evenings, scenic hikes through lush green hills, 
+                            and boat rides on the tranquil Gregory Lake. Enjoy a warm cup of world-famous 
+                            Nuwara Eliya tea as you unwind in our elegant suites, designed for absolute relaxation. 
+                            Whether you're exploring the Horton Plains, taking in the vibrant blooms of Hakgala Gardens, 
+                            or enjoying a horseback ride through town, every moment here is a journey into timeless beauty.</p> 
+
+                        <p> Our exclusive seasonal offers let you experience this highland paradise like never before! Book 
+                            your stay now and immerse yourself in the charm, elegance, and refreshing climate of Nuwara Eliya. 
+                            Your mountain escape awaits! ⛰️🍃</p>
+                        
+                        <div class="card" id="specialOfferCard">
+                            <div class="content">
+                                <div class="title">Get Special Offers!</div>
+                                <marquee direction="down" scrollamount="3"><div class="price">20%</div></marquee>
+                                <div class="description">
+                                    <b>Luxury Suite Special!</b>
+                                </div>
+                            </div>
+                                <button id="seeMoreButton" class="see-more-btn">
+                                    See more..
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="offerPopup" class="offer-popup">
+                    <div class="popup-content">
+                        <span class="close-btn" id="closePopup">&times;</span>
+                        <h2>Luxury Suite Special</h2>
+                        <p>Enjoy a 20% discount on our premium luxury suites with complimentary breakfast.</p>
+                        <p>Indulge in a world of elegance and tranquility at Secret Berry Resort...</p>
+                        <ul>
+                            <li>🍓 Breathtaking Views</li>
+                            <li>🛏️ Elegant & Spacious Interiors</li>
+                            <li>🥐 Complimentary Gourmet Breakfast</li>
+                            <li>🛀 Private Jacuzzi & Rain Shower</li>
+                            <li>🔥 Cozy Fireplace</li>
+                            <li>📺 Entertainment & Modern Amenities</li>
+                        </ul>
+                        <button class="btn-book-now">Book Now</button>
+                    </div>
+
+                    <div id="formPopup" class="side-popup">
+                        <div class="side-popup-content">
+                            <span class="side-close-btn" id="closeFormPopup">&times;</span>
+                            <h3>Book Luxury Suite</h3>
+                            <p><strong>Original Price:</strong> $250</p>
+                            <p><strong>Discount:</strong> 20%</p>
+                            <p><strong>New Price:</strong> <span style="color: green; font-weight: bold;">$200</span></p>
+                    
+                            <form id="bookingForm">
+                                <label>Name:</label>
+                                <input type="text" name="name" required>
+                    
+                                <label>Email:</label>
+                                <input type="email" name="email" required>
+                    
+                                <label>Check-In Date:</label>
+                                <input type="date" name="date" required>
+                    
+                                <label>No. of Guests:</label>
+                                <input type="number" name="guests" required>
+                    
+                                <button type="submit" class="btn-confirm">Submit Booking</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            <div class="second-sub-text">
+                    <p><u><b>About this property</b></u></p>
+                    <p><b>Comfortable Accommodations:</b>Palazzo Lake Gregory in Nuwara Eliya offers comfortable rooms with private bathrooms, 
+                        tea and coffee makers, and free toiletries. Each room includes a shower and complimentary WiFi throughout the property</p>
+                    <p><b>Dining Experience:</b>Our family-friendly restaurant offers a diverse selection of cuisines, including Chinese, British, 
+                        Indian, Italian, and local specialties. Guests can enjoy a delightful breakfast with continental, American, buffet, and full 
+                        English options. Be sure to try our exclusive dishes featuring our secret berry product, a unique ingredient that adds a delicious 
+                        twist to our signature desserts and beverages.</p>
+                    <p><b>Leisure Facilities:</b>The hotel features a garden, terrace, and free on-site parking. Additional amenities include a child-friendly 
+                        buffet, electric vehicle charging station, and bicycle parking.</p>
+                    <p><b>Location and Attractions:</b>Located 1.9 mi from Gregory Lake and 4.3 mi from Hakgala Botanical Garden, the property is 30 mi from 
+                        Castlereigh Reservoir Seaplane Base. Guests appreciate the scenic views and attentive staff.</p>
+
+                    <p>Couples in particular like the location – they rated it 8.9 for a two-person trip.</p>           
+                    
+                    <div class="icon-list">
+                        <p><b>Most popular facilities</b></p>
+                        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+                        <i class="bi bi-wifi"></i> Free WiFi  &nbsp;
+                        <i class="bi bi-p-circle"></i> Free Parking  &nbsp;
+                        <i class="bi bi-shop"></i> Restaurant  &nbsp;
+                        <i class="bi bi-ban"></i> Non-Smoking Rooms  &nbsp;
+                        <i class="bi bi-cone-striped"></i> Room Service  &nbsp;
+                        <i class="bi bi-thermometer-half"></i> Heating<br>
+                        <i class="bi bi-fire"></i> BBQ Facilities  &nbsp;
+                        <i class="bi bi-tree"></i> Garden  &nbsp; 
+                        <i class="bi bi-cup-hot"></i> Tea/Coffee Maker in All Rooms  &nbsp;
+                        <i class="bi bi-egg-fried"></i> Breakfast
+                    </div>
+            </div>
+
+            <div class="container my-4">
+                <h4 class="text-center mb-3">Choose Rooms by Occupancy</h4>
+                <select id="occupancySelect" class="form-select w-50 mx-auto mb-4">
+                    <option>Select Type</option>
+                  <option value="solo">Solo Traveler</option>
+                  <option value="couple">Couple</option>
+                  <option value="small_family">Small Family</option>
+                  <option value="large_family">Large Family</option>
+                  <option value="single">Single Bed</option>
+                  <option value="double">Double Bed</option>
+                  <option value="queen">Queen Bed</option>
+                  <option value="king">King Bed</option>
+                </select>
+              </div>
+              
+              <div class="container">
+                <div class="row" id="roomCards"></div>
+              </div>
+              
+              
+              <script>
+                const roomTemplates = {
+                  solo: `
+                    <div class="col-lg-4 col-md-6 my-3">
+                      <div class="new-card border-0 shadow" style="max-width: 350px; margin: auto;">
+                        <img src="Assets/media/room_catalogue/room/5.jpg" class="card-img-top" alt="Solo Room">
+                        <div class="card-body">
+                          <h5>Solo Room</h5>
+                          <h6 class="mb-4">$80 per night</h6>
+                          <div class="features mb-4">
+                            <h6 class="mb-1">Features</h6>
+                            <span class="badge rounded-pill bg-light text-dark text-wrap">1 Room</span>
+                            <span class="badge rounded-pill bg-light text-dark text-wrap">1 Bathroom</span>
+                            <span class="badge rounded-pill bg-light text-dark text-wrap">1 Sofa</span>
+                          </div>
+                          <div class="facilities mb-4">
+                            <h6 class="mb-1">Facilities</h6>
+                            <span class="badge rounded-pill bg-light text-dark text-wrap">WiFi</span>
+                            <span class="badge rounded-pill bg-light text-dark text-wrap">Room Heater</span>
+                          </div>
+                          <div class="d-flex justify-content-evenly mb-2">
+                            <a href="#" class="btn btn-primary" onclick="openBookingPopup('Solo Room')">Book Now</a>
+                            <a href="#" class="btn btn-light btn-outline-primary" onclick="openRoomDetails('solo')">More details</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  `,
+                  couple: `
+                    <div class="col-lg-4 col-md-6 my-3">
+                      <div class="new-card border-0 shadow" style="max-width: 350px; margin: auto;">
+                        <img src="Assets/media/room_catalogue/room/1.jpeg" class="card-img-top" alt="Couple Room">
+                        <div class="card-body">
+                          <h5>Couple Suite</h5>
+                          <h6 class="mb-4">$150 per night</h6>
+                          <div class="features mb-4">
+                            <h6 class="mb-1">Features</h6>
+                            <span class="badge rounded-pill bg-light text-dark text-wrap">1 Large Bed</span>
+                            <span class="badge rounded-pill bg-light text-dark text-wrap">1 Bathroom</span>
+                          </div>
+                          <div class="facilities mb-4">
+                            <h6 class="mb-1">Facilities</h6>
+                            <span class="badge rounded-pill bg-light text-dark text-wrap">WiFi</span>
+                            <span class="badge rounded-pill bg-light text-dark text-wrap">Television</span>
+                          </div>
+                          <div class="d-flex justify-content-evenly mb-2">
+                            <a href="#" class="btn btn-primary" onclick="openBookingPopup('couple Room')">Book Now</a>
+                            <a href="#" class="btn btn-light btn-outline-primary" onclick="openRoomDetails('couple')">More details</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  `,
+                  small_family: `
+                     <div class="col-lg-4 col-md-6 my-3">
+                          <div class="new-card border-0 shadow" style="max-width: 350px; margin: auto;">
+                            <img src="Assets/media/room_catalogue/room/6.webp" class="card-img-top" alt="Small Family Room">
+                            <div class="card-body">
+                              <h5>Family Room</h5>
+                              <h6 class="mb-4">$180 per night</h6>
+                              <div class="features mb-4">
+                                <h6 class="mb-1">Features</h6>
+                                <span class="badge bg-light text-dark">2 Bedrooms</span>
+                                <span class="badge bg-light text-dark">2 Bathrooms</span>
+                                <span class="badge bg-light text-dark">1 Living Room</span>
+                              </div>
+                              <div class="facilities mb-4">
+                                <h6 class="mb-1">Facilities</h6>
+                                <span class="badge bg-light text-dark">Wi-Fi</span>
+                                <span class="badge bg-light text-dark">TV</span>
+                                <span class="badge bg-light text-dark">Mini Kitchen</span>
+                              </div>
+                              <div class="rating mb-4">
+                                <h6 class="mb-1">Rating</h6>
+                                <span class="badge bg-light">
+                                  <i class="bi bi-star-fill text-warning"></i>
+                                  <i class="bi bi-star-fill text-warning"></i>
+                                  <i class="bi bi-star-fill text-warning"></i>
+                                  <i class="bi bi-star text-warning"></i>
+                                  <i class="bi bi-star text-warning"></i>
+                                </span>
+                              </div>
+                              <div class="d-flex justify-content-evenly mb-2">
+                                <a href="#" class="btn btn-primary" onclick="openBookingPopup('Family Room')">Book Now</a>
+                                <a href="#" class="btn btn-outline-primary" onclick="openRoomDetails('small_family')">More details</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>`,
+                    
+                    large_family: `
+                        <div class="col-lg-4 col-md-6 my-3">
+                          <div class="new-card border-0 shadow" style="max-width: 350px; margin: auto;">
+                            <img src="Assets/media/room_catalogue/room/4.jpg" class="card-img-top" alt="Large Family Room">
+                            <div class="card-body">
+                              <h5>Large Family Suite</h5>
+                              <h6 class="mb-4">$250 per night</h6>
+                              <div class="features mb-4">
+                                <h6 class="mb-1">Features</h6>
+                                <span class="badge bg-light text-dark">3 Bedrooms</span>
+                                <span class="badge bg-light text-dark">3 Bathrooms</span>
+                                <span class="badge bg-light text-dark">Dining + Living Room</span>
+                              </div>
+                              <div class="facilities mb-4">
+                                <h6 class="mb-1">Facilities</h6>
+                                <span class="badge bg-light text-dark">Kitchen</span>
+                                <span class="badge bg-light text-dark">TV</span>
+                                <span class="badge bg-light text-dark">AC</span>
+                                <span class="badge bg-light text-dark">Room Heater</span>
+                              </div>
+                              <div class="rating mb-4">
+                                <h6 class="mb-1">Rating</h6>
+                                <span class="badge bg-light">
+                                  <i class="bi bi-star-fill text-warning"></i>
+                                  <i class="bi bi-star-fill text-warning"></i>
+                                  <i class="bi bi-star-fill text-warning"></i>
+                                  <i class="bi bi-star-fill text-warning"></i>
+                                  <i class="bi bi-star-fill text-warning"></i>
+                                </span>
+                              </div>
+                              <div class="d-flex justify-content-evenly mb-2">
+                                <a href="#" class="btn btn-primary" onclick="openBookingPopup('Large Room')">Book Now</a>
+                                <a href="#" class="btn btn-outline-primary" onclick="openRoomDetails('large_family')">More details</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>`,
+                        single: `
+                            <div class="col-lg-4 col-md-6 my-3">
+                              <div class="new-card border-0 shadow" style="max-width: 350px; margin: auto;">
+                                <img src="Assets/media/room_catalogue/room/7.webp" class="card-img-top" alt="Single Bed Room">
+                                <div class="card-body">
+                                  <h5>Single Bed Room</h5>
+                                  <h6 class="mb-4">$60 per night</h6>
+                                  <div class="features mb-4">
+                                    <h6 class="mb-1">Features</h6>
+                                    <span class="badge bg-light text-dark">1 Single Bed</span>
+                                    <span class="badge bg-light text-dark">Free Wifi</span>
+                                  </div>
+                                  <div class="facilities mb-4">
+                                    <h6 class="mb-1">Facilities</h6>
+                                    <span class="badge bg-light text-dark">TV</span>
+                                    <span class="badge bg-light text-dark">Room Heater</span>
+                                  </div>
+                                  <div class="d-flex justify-content-evenly mb-2">
+                                    <a href="#" class="btn btn-primary" onclick="openBookingPopup('single Room')">Book Now</a>
+                                    <a href="#" class="btn btn-outline-primary" onclick="openRoomDetails('single')">More details</a>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>`,
+                        
+                          double: `
+                            <div class="col-lg-4 col-md-6 my-3">
+                              <div class="new-card border-0 shadow" style="max-width: 350px; margin: auto;">
+                                <img src="Assets/media/room_catalogue/room/10.jpg" class="card-img-top" alt="Double Bed Room">
+                                <div class="card-body">
+                                  <h5>Double Bed Room</h5>
+                                  <h6 class="mb-4">$90 per night</h6>
+                                  <div class="features mb-4">
+                                    <h6 class="mb-1">Features</h6>
+                                    <span class="badge bg-light text-dark">1 Double Bed</span>
+                                    <span class="badge bg-light text-dark">Balcony</span>
+                                  </div>
+                                  <div class="facilities mb-4">
+                                    <h6 class="mb-1">Facilities</h6>
+                                    <span class="badge bg-light text-dark">AC</span>
+                                    <span class="badge bg-light text-dark">Mini Fridge</span>
+                                  </div>
+                                  <div class="d-flex justify-content-evenly mb-2">
+                                    <a href="#" class="btn btn-primary" onclick="openBookingPopup('double Room')">Book Now</a>
+                                    <a href="#" class="btn btn-outline-primary" onclick="openRoomDetails('double')">More details</a>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>`,
+                        
+                          queen: `
+                            <div class="col-lg-4 col-md-6 my-3">
+                              <div class="new-card border-0 shadow" style="max-width: 350px; margin: auto;">
+                                <img src="Assets/media/room_catalogue/room/13.jpg" class="card-img-top" alt="Queen Bed Room">
+                                <div class="card-body">
+                                  <h5>Queen Bed Room</h5>
+                                  <h6 class="mb-4">$110 per night</h6>
+                                  <div class="features mb-4">
+                                    <h6 class="mb-1">Features</h6>
+                                    <span class="badge bg-light text-dark">1 Queen Bed</span>
+                                    <span class="badge bg-light text-dark">Mountain View</span>
+                                  </div>
+                                  <div class="facilities mb-4">
+                                    <h6 class="mb-1">Facilities</h6>
+                                    <span class="badge bg-light text-dark">Jacuzzi</span>
+                                    <span class="badge bg-light text-dark">Mini Bar</span>
+                                  </div>
+                                  <div class="d-flex justify-content-evenly mb-2">
+                                    <a href="#" class="btn btn-primary" onclick="openBookingPopup('queen Room')">Book Now</a>
+                                    <a href="#" class="btn btn-outline-primary" onclick="openRoomDetails('queen')">More details</a>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>`,
+                        
+                          king: `
+                            <div class="col-lg-4 col-md-6 my-3">
+                              <div class="new-card border-0 shadow" style="max-width: 350px; margin: auto;">
+                                <img src="Assets/media/room_catalogue/room/9.jpg" class="card-img-top" alt="King Bed Room">
+                                <div class="card-body">
+                                  <h5>King Bed Room</h5>
+                                  <h6 class="mb-4">$130 per night</h6>
+                                  <div class="features mb-4">
+                                    <h6 class="mb-1">Features</h6>
+                                    <span class="badge bg-light text-dark">1 King Bed</span>
+                                    <span class="badge bg-light text-dark">Fireplace</span>
+                                  </div>
+                                  <div class="facilities mb-4">
+                                    <h6 class="mb-1">Facilities</h6>
+                                    <span class="badge bg-light text-dark">Smart TV</span>
+                                    <span class="badge bg-light text-dark">Sound System</span>
+                                  </div>
+                                  <div class="d-flex justify-content-evenly mb-2">
+                                    <a href="#" class="btn btn-primary" onclick="openBookingPopup('King Room')">Book Now</a>
+                                    <a href="#" class="btn btn-outline-primary" onclick="openRoomDetails('king')">More details</a>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>`
+                };
+              
+                document.getElementById("occupancySelect").addEventListener("change", function () {
+                  const selected = this.value;
+                  const roomCards = document.getElementById("roomCards");
+                  roomCards.innerHTML = roomTemplates[selected] || "";
+                });
+              </script>
+
+
+                <div class="modal fade" id="roomDetailsModal" tabindex="-1" aria-labelledby="roomDetailsModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="roomDetailsModalLabel">Room Details</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          <!-- Room details will be dynamically added here -->
+
+                          <script>
+                            const roomDetails = {
+                                  solo: `
+                                    <h5>Solo Room</h5>
+                                    <p><strong>Price:</strong> $80 per night</p>
+                                    <h6>Features</h6>
+                                    <ul>
+                                      <li>1 Room</li>
+                                      <li>1 Bathroom</li>
+                                      <li>1 Sofa</li>
+                                    </ul>
+                                    <h6>Facilities</h6>
+                                    <ul>
+                                      <li>WiFi</li>
+                                      <li>Room Heater</li>
+                                    </ul>
+                                    <p><strong>Rating:</strong></p>
+                                    <div class="rating">
+                                      <i class="bi bi-star-fill text-warning"></i>
+                                      <i class="bi bi-star-fill text-warning"></i>
+                                      <i class="bi bi-star-fill text-warning"></i>
+                                      <i class="bi bi-star text-warning"></i>
+                                      <i class="bi bi-star text-warning"></i>
+                                    </div>
+                                  `,
+                                  couple: `
+                                    <h5>Couple Suite</h5>
+                                    <p><strong>Price:</strong> $150 per night</p>
+                                    <h6>Features</h6>
+                                    <ul>
+                                      <li>1 Large Bed</li>
+                                      <li>1 Bathroom</li>
+                                    </ul>
+                                    <h6>Facilities</h6>
+                                    <ul>
+                                      <li>WiFi</li>
+                                      <li>Television</li>
+                                    </ul>
+                                    <p><strong>Rating:</strong></p>
+                                    <div class="rating">
+                                      <i class="bi bi-star-fill text-warning"></i>
+                                      <i class="bi bi-star-fill text-warning"></i>
+                                      <i class="bi bi-star-fill text-warning"></i>
+                                      <i class="bi bi-star text-warning"></i>
+                                      <i class="bi bi-star text-warning"></i>
+                                    </div>
+                                  `,
+                                  small_family: `
+                                    <h5>Family Room</h5>
+                                    <p><strong>Price:</strong> $180 per night</p>
+                                    <h6>Features</h6>
+                                    <ul>
+                                      <li>2 Bedrooms</li>
+                                      <li>2 Bathrooms</li>
+                                      <li>1 Living Room</li>
+                                    </ul>
+                                    <h6>Facilities</h6>
+                                    <ul>
+                                      <li>Wi-Fi</li>
+                                      <li>TV</li>
+                                      <li>Mini Kitchen</li>
+                                    </ul>
+                                    <p><strong>Rating:</strong></p>
+                                    <div class="rating">
+                                      <i class="bi bi-star-fill text-warning"></i>
+                                      <i class="bi bi-star-fill text-warning"></i>
+                                      <i class="bi bi-star-fill text-warning"></i>
+                                      <i class="bi bi-star text-warning"></i>
+                                      <i class="bi bi-star text-warning"></i>
+                                    </div>
+                                  `,
+                                  large_family: `
+                                    <h5>Large Family Suite</h5>
+                                    <p><strong>Price:</strong> $250 per night</p>
+                                    <h6>Features</h6>
+                                    <ul>
+                                      <li>3 Bedrooms</li>
+                                      <li>3 Bathrooms</li>
+                                      <li>Dining + Living Room</li>
+                                    </ul>
+                                    <h6>Facilities</h6>
+                                    <ul>
+                                      <li>Kitchen</li>
+                                      <li>TV</li>
+                                      <li>AC</li>
+                                      <li>Room Heater</li>
+                                    </ul>
+                                    <p><strong>Rating:</strong></p>
+                                    <div class="rating">
+                                      <i class="bi bi-star-fill text-warning"></i>
+                                      <i class="bi bi-star-fill text-warning"></i>
+                                      <i class="bi bi-star-fill text-warning"></i>
+                                      <i class="bi bi-star-fill text-warning"></i>
+                                      <i class="bi bi-star-fill text-warning"></i>
+                                    </div>
+                                  `,
+                                  single: `
+                                    <h5>Single Bed Room</h5>
+                                    <p><strong>Price:</strong> $60 per night</p>
+                                    <h6>Features</h6>
+                                    <ul>
+                                      <li>1 Single Bed</li>
+                                      <li>Free Wifi</li>
+                                    </ul>
+                                    <h6>Facilities</h6>
+                                    <ul>
+                                      <li>TV</li>
+                                      <li>Room Heater</li>
+                                    </ul>
+                                    <p><strong>Rating:</strong></p>
+                                    <div class="rating">
+                                      <i class="bi bi-star-fill text-warning"></i>
+                                      <i class="bi bi-star-fill text-warning"></i>
+                                      <i class="bi bi-star-fill text-warning"></i>
+                                      <i class="bi bi-star text-warning"></i>
+                                      <i class="bi bi-star text-warning"></i>
+                                    </div>
+                                  `,
+                                  double: `
+                                    <h5>Double Bed Room</h5>
+                                    <p><strong>Price:</strong> $90 per night</p>
+                                    <h6>Features</h6>
+                                    <ul>
+                                      <li>1 Double Bed</li>
+                                      <li>Balcony</li>
+                                    </ul>
+                                    <h6>Facilities</h6>
+                                    <ul>
+                                      <li>AC</li>
+                                      <li>Mini Fridge</li>
+                                    </ul>
+                                    <p><strong>Rating:</strong></p>
+                                    <div class="rating">
+                                      <i class="bi bi-star-fill text-warning"></i>
+                                      <i class="bi bi-star-fill text-warning"></i>
+                                      <i class="bi bi-star-fill text-warning"></i>
+                                      <i class="bi bi-star text-warning"></i>
+                                      <i class="bi bi-star text-warning"></i>
+                                    </div>
+                                  `,
+                                  queen: `
+                                    <h5>Queen Bed Room</h5>
+                                    <p><strong>Price:</strong> $110 per night</p>
+                                    <h6>Features</h6>
+                                    <ul>
+                                      <li>1 Queen Bed</li>
+                                      <li>Sea View</li>
+                                    </ul>
+                                    <h6>Facilities</h6>
+                                    <ul>
+                                      <li>Jacuzzi</li>
+                                      <li>Mini Bar</li>
+                                    </ul>
+                                    <p><strong>Rating:</strong></p>
+                                    <div class="rating">
+                                      <i class="bi bi-star-fill text-warning"></i>
+                                      <i class="bi bi-star-fill text-warning"></i>
+                                      <i class="bi bi-star-fill text-warning"></i>
+                                      <i class="bi bi-star text-warning"></i>
+                                      <i class="bi bi-star text-warning"></i>
+                                    </div>
+                                  `,
+                                  king: `
+                                    <h5>King Bed Room</h5>
+                                    <p><strong>Price:</strong> $130 per night</p>
+                                    <h6>Features</h6>
+                                    <ul>
+                                      <li>1 King Bed</li>
+                                      <li>Fireplace</li>
+                                    </ul>
+                                    <h6>Facilities</h6>
+                                    <ul>
+                                      <li>Smart TV</li>
+                                      <li>Sound System</li>
+                                    </ul>
+                                    <p><strong>Rating:</strong></p>
+                                    <div class="rating">
+                                      <i class="bi bi-star-fill text-warning"></i>
+                                      <i class="bi bi-star-fill text-warning"></i>
+                                      <i class="bi bi-star-fill text-warning"></i>
+                                      <i class="bi bi-star-fill text-warning"></i>
+                                      <i class="bi bi-star-fill text-warning"></i>
+                                    </div>
+                                  `,
+                                };
+
+                          </script>
+                          <div id="roomDetailsContent">
+                            <!-- Example: dynamic content inserted here -->
+                             <script>
+                                function openRoomDetails(roomType) {
+                                  const roomContent = roomDetails[roomType];
+                                  const roomDetailsContent = document.getElementById('roomDetailsContent');
+
+                                  // Set dynamic content in the modal body
+                                  roomDetailsContent.innerHTML = roomContent;
+
+                                  // Show the modal
+                                  const myModal = new bootstrap.Modal(document.getElementById('roomDetailsModal'));
+                                  myModal.show();
+                                }
+                             </script>
+                          </div>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary" onclick="openBookingPopup()">Book Now</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+              
+                    
+                <h2 class="mt-5 pt-4 mb-4 text-center fw-bold h-font">Normal Standard Rooms</h2>
+
+                <div class="room-container-base">
+                    <div class="room-sub-container">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-6 my-3">
+                                <div class="new-card border-0 shadow" style="max-width: 350px; margin: auto;">
+                                    <img src="Assets/media/room_catalogue/room/1.jpeg" class="card-img-top" alt="room image 1">
+                                    <div class="card-body">
+                                        <h5>Simple Room </h5>
+                                        <h6 class="mb-4">$100 per night</h6>
+                                        <div class="features mb-4">
+                                            <h6 class="mb-1">Features</h6>
+                                            <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                                2 Rooms
+                                            </span>
+                                            <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                                1 Bathroom
+                                            </span>
+                                            <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                                1 Balcony
+                                            </span>
+                                            <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                                3 sofa
+                                            </span>
+                                        </div>
+                                        <div class="facilities mb-4">
+                                            <h6 class="mb-1">Facilities</h6>
+                                            <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                                Wifi
+                                            </span>
+                                            <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                                Television
+                                            </span>
+                                            <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                                AC
+                                            </span>
+                                            <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                                Room heater
+                                            </span>
+                                        </div>
+                                        <div class="rating mb-4">
+                                            <h6 class="mb-1">Rating</h6>
+                                            <span class="badge rounded-pill bg-light">
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                            </span>
+                                        </div>
+                                        <div class="d-flex justify-content-evenly mb-2">
+                                            <a href="#" class="btn btn-primary" onclick="openBookingPopup('simple room')">Book Now</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 my-3">
+                                <div class="new-card border-0 shadow" style="max-width: 350px; margin: auto;">
+                                    <img src="Assets/media/room_catalogue/room/2.jpg" class="card-img-top" alt="room image 1">
+                                    <div class="card-body">
+                                        <h5>Simple Room </h5>
+                                        <h6 class="mb-4">$100 per night</h6>
+                                        <div class="features mb-4">
+                                            <h6 class="mb-1">Features</h6>
+                                            <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                                2 Rooms
+                                            </span>
+                                            <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                                1 Bathroom
+                                            </span>
+                                            <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                                1 Balcony
+                                            </span>
+                                            <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                                3 sofa
+                                            </span>
+                                        </div>
+                                        <div class="facilities mb-4">
+                                            <h6 class="mb-1">Facilities</h6>
+                                            <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                                Wifi
+                                            </span>
+                                            <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                                Television
+                                            </span>
+                                            <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                                AC
+                                            </span>
+                                            <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                                Room heater
+                                            </span>
+                                        </div>
+                                        <div class="rating mb-4">
+                                            <h6 class="mb-1">Rating</h6>
+                                            <span class="badge rounded-pill bg-light">
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                            </span>
+                                        </div>
+                                        <div class="d-flex justify-content-evenly mb-2">
+                                            <a href="#" class="btn btn-primary" onclick="openBookingPopup('simple room')">Book Now</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 my-3">
+                                <div class="new-card border-0 shadow" style="max-width: 350px; margin: auto;">
+                                    <img src="Assets/media/room_catalogue/room/3.jpg" class="card-img-top" alt="room image 1">
+                                    <div class="card-body">
+                                        <h5>Simple Room </h5>
+                                        <h6 class="mb-4">$100 per night</h6>
+                                        <div class="features mb-4">
+                                            <h6 class="mb-1">Features</h6>
+                                            <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                                2 Rooms
+                                            </span>
+                                            <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                                1 Bathroom
+                                            </span>
+                                            <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                                1 Balcony
+                                            </span>
+                                            <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                                3 sofa
+                                            </span>
+                                        </div>
+                                        <div class="facilities mb-4">
+                                            <h6 class="mb-1">Facilities</h6>
+                                            <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                                Wifi
+                                            </span>
+                                            <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                                Television
+                                            </span>
+                                            <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                                AC
+                                            </span>
+                                            <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                                Room heater
+                                            </span>
+                                        </div>
+                                        <div class="rating mb-4">
+                                            <h6 class="mb-1">Rating</h6>
+                                            <span class="badge rounded-pill bg-light">
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                            </span>
+                                        </div>
+                                        <div class="d-flex justify-content-evenly mb-2">
+                                            <a href="#" class="btn btn-primary" onclick="openBookingPopup('simple room')">Book Now</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 my-3">
+                                <div class="new-card border-0 shadow" style="max-width: 350px; margin: auto;">
+                                    <img src="Assets/media/room_catalogue/room/4.jpg" class="card-img-top" alt="room image 1">
+                                    <div class="card-body">
+                                        <h5>Simple Room </h5>
+                                        <h6 class="mb-4">$100 per night</h6>
+                                        <div class="features mb-4">
+                                            <h6 class="mb-1">Features</h6>
+                                            <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                                2 Rooms
+                                            </span>
+                                            <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                                1 Bathroom
+                                            </span>
+                                            <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                                1 Balcony
+                                            </span>
+                                            <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                                3 sofa
+                                            </span>
+                                        </div>
+                                        <div class="facilities mb-4">
+                                            <h6 class="mb-1">Facilities</h6>
+                                            <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                                Wifi
+                                            </span>
+                                            <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                                Television
+                                            </span>
+                                            <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                                AC
+                                            </span>
+                                            <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                                Room heater
+                                            </span>
+                                        </div>
+                                        <div class="rating mb-4">
+                                            <h6 class="mb-1">Rating</h6>
+                                            <span class="badge rounded-pill bg-light">
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                            </span>
+                                        </div>
+                                        <div class="d-flex justify-content-evenly mb-2">
+                                            <a href="#" class="btn btn-primary" onclick="openBookingPopup('simple room')">Book Now</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 my-3">
+                                <div class="new-card border-0 shadow" style="max-width: 350px; margin: auto;">
+                                    <img src="Assets/media/room_catalogue/room/5.jpg" class="card-img-top" alt="room image 1">
+                                    <div class="card-body">
+                                        <h5>Simple Room </h5>
+                                        <h6 class="mb-4">$100 per night</h6>
+                                        <div class="features mb-4">
+                                            <h6 class="mb-1">Features</h6>
+                                            <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                                2 Rooms
+                                            </span>
+                                            <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                                1 Bathroom
+                                            </span>
+                                            <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                                1 Balcony
+                                            </span>
+                                            <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                                3 sofa
+                                            </span>
+                                        </div>
+                                        <div class="facilities mb-4">
+                                            <h6 class="mb-1">Facilities</h6>
+                                            <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                                Wifi
+                                            </span>
+                                            <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                                Television
+                                            </span>
+                                            <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                                AC
+                                            </span>
+                                            <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                                Room heater
+                                            </span>
+                                        </div>
+                                        <div class="rating mb-4">
+                                            <h6 class="mb-1">Rating</h6>
+                                            <span class="badge rounded-pill bg-light">
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                            </span>
+                                        </div>
+                                        <div class="d-flex justify-content-evenly mb-2">
+                                            <a href="#" class="btn btn-primary" onclick="openBookingPopup('simple room')">Book Now</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            
+                            <div class="col-lg-4 col-md-6 my-3">
+                                <div class="new-card border-0 shadow" style="max-width: 350px; margin: auto;">
+                                    <img src="Assets/media/room_catalogue/room/6.webp" class="card-img-top" alt="room image 1">
+                                    <div class="card-body">
+                                        <h5>Simple Room </h5>
+                                        <h6 class="mb-4">$100 per night</h6>
+                                        <div class="features mb-4">
+                                            <h6 class="mb-1">Features</h6>
+                                            <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                                2 Rooms
+                                            </span>
+                                            <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                                1 Bathroom
+                                            </span>
+                                            <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                                1 Balcony
+                                            </span>
+                                            <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                                3 sofa
+                                            </span>
+                                        </div>
+                                        <div class="facilities mb-4">
+                                            <h6 class="mb-1">Facilities</h6>
+                                            <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                                Wifi
+                                            </span>
+                                            <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                                Television
+                                            </span>
+                                            <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                                AC
+                                            </span>
+                                            <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                                Room heater
+                                            </span>
+                                        </div>
+                                        <div class="rating mb-4">
+                                            <h6 class="mb-1">Rating</h6>
+                                            <span class="badge rounded-pill bg-light">
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                            </span>
+                                        </div>
+                                        <div class="d-flex justify-content-evenly mb-2">
+                                            <a href="#" class="btn btn-primary" onclick="openBookingPopup('simple room')">Book Now</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-lg-12 text-center mb-5">
+                                <a href="#" class="btn btn-sm btn-outline-dark rounded-0 fw-bold shadow-none">More Rooms >>></a>
+
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+    <div id="footer"></div>
+    <script src="Assets/js/YOUR SCRIPT NAME"></script>
+</body>
+</html>
